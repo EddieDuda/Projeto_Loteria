@@ -1,2 +1,2 @@
 # Projeto_Loteria
-vxzvvxczvzx
+Projeto feito pelos alunos e Vinícius Dias
