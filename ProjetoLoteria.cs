@@ -3,7 +3,7 @@ class HelloWorld {
  
   //criamos um modulo para apresentar os resultados da aposta
   static void resultado(int[,] matrizaposta, int[,] matrizresultado){
-    int linha = 0, coluna = 0, iguais = 0;
+    int linha = 0, coluna = 0;
    
     //um for que vai ler cada elemento de cada coluna e linha da matrizapost
     //e caso o elemento da matriz aposta seja igual a 1
