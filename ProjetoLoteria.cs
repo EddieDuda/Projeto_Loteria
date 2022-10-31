@@ -1,7 +1,20 @@
 using System;
 class HelloWorld {
+  static void resultado(int[,] matrizaposta, int[,] matrizresultado){
+    int linha = 0, coluna = 0, iguais = 0;
+    for (linha = 0; linha < 13; linha++){
+        for (coluna = 0; coluna < 3; coluna++){
+            if(matrizaposta[linha, coluna] == 1 && matrizresultado[linha, coluna] == 1){
+                iguais++;
+            }
+        }
+    }
+    Console.WriteLine("\n");
+    Console.WriteLine($"Resultado = {iguais}");
+        
+  }
   static void Main() {
-    int[,] matrizaposta = new int[13,3];//matriz pronta pra teste//{{ 1,0,0 }, { 1,1,0 }, { 0,1,1 }, { 0,0,1 }, { 1,1,0 }, { 0,0,1}, { 1,0,0 }, {1,1,0}, { 0,0,1 }, { 1,1,0}, { 0,1,1}, { 0,0,1 }, {1,1,0}};
+    int[,] matrizaposta = new int[13,3];//matriz pronta pra teste{{ 1,0,0 }, { 1,1,0 }, { 0,1,1 }, { 0,0,1 }, { 1,1,0 }, { 0,0,1}, { 1,0,0 }, {1,1,0}, { 0,0,1 }, { 1,1,0}, { 0,1,1}, { 0,0,1 }, {1,1,0}};
     int[,] matrizresultado = new int[13,3]{{ 0,0,1 }, { 1,0,0 }, { 1,0,0 }, { 0,0,1 }, { 0,0,1 }, { 0,1,0 }, { 0,0,1 }, { 1,0,0 }, { 1,0,0 }, { 0,1,0}, { 0,0,1 }, { 0,1,0 }, { 0,0,1 }};
     int linha = 0, coluna = 0, iguais = 0;
     string confirmacao = " ";
@@ -36,15 +49,6 @@ class HelloWorld {
             }
         }
     }
-    for (linha = 0; linha < 13; linha++){
-        for (coluna = 0; coluna < 3; coluna++){
-            if(matrizaposta[linha, coluna] == 1 && matrizresultado[linha, coluna] == 1){
-                iguais++;
-            }
-        }
-    }
-    Console.WriteLine("\n");
-    Console.WriteLine($"Resultado = {iguais}");
-        
+    resultado(matrizaposta, matrizresultado);
     }
 }
