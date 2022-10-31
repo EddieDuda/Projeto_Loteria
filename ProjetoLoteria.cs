@@ -74,3 +74,4 @@ class HelloWorld {
     resultado(matrizaposta, matrizresultado);
     }
 }
+//modularizar a entrada de dados e diminuir a quantidade de entradas
